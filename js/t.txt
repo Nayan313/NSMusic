@@ -1,0 +1,34 @@
+      // let SongCards = document.querySelectorAll(".AlbumPlaylistSongCard");
+
+      // SongCards.forEach((card) => {
+      //   card.addEventListener("click", (event) => {
+      //     const SongId = event.currentTarget.id;
+      //     event.currentTarget.classList.add("play");
+      //     console.log(SongId);
+      //     const SongData = data.data.songs.filter((obj) => obj.id === SongId);
+      //     console.log("Song dta");
+      //     let SongLink = SongData[0];
+      //     console.log(SongLink);
+      //     const url = SongLink.downloadUrl[4].url;
+      //     let FindIn = ClickedPlayListSong.findIndex(
+      //       (obj) => obj.SongData.id === SongId && obj.PlaylistId === PlaylistId
+      //     );
+      //     console.log("SongCurrentIndex" + FindIn);
+      //     SongCurrentIndex = FindIn;
+      //     audioPlayer.src = url;
+      //     UpdateSongInfo(SongLink, PlaylistId);
+      //     queueSong(ClickedPlayListSong, SongId, PlaylistId);
+      //   });
+      // });
+
+
+
+
+
+
+
+
+
+
+      
+ 

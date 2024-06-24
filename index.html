@@ -1,11 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NS Music</title>
+    <title>NS Music Project</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <script src="script.js"></script>
+
+    <div class="popup-class">
+
+        <div class="pop-up">
+            <div class="img-section">
+                <img class="img" crossOrigin="anonymous"
+                    src="https://c.saavncdn.com/001/Rocky-Aur-Rani-Kii-Prem-Kahaani-Hindi-2024-20240515173546-500x500.jpg"
+                    alt="">
+            </div>
+            <div class="song-detail">
+                <h5>Now playing</h5>
+                <h4 class="player-song-name">name name name name name </h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="logo">
+        <img  src="./svg/logo.png" alt="">
+    </div>
+    <div class="bottom-nav">
+        <nav>
+            <button class="SidebarButtons active" id="OpenHome"><svg viewBox="0 0 24 24">
+                    <path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M20 19v-8.5a1 1 0 0 0-.4-.8l-7-5.25a1 1 0 0 0-1.2 0l-7 5.25a1 1 0 0 0-.4.8V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1" />
+                </svg> Home</button>
+            <button class="SidebarButtons" id="OpenExplore"><svg viewBox="0 0 24 24" fill="none">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM13.9563 14.0949C13.763 14.2644 13.5167 14.3629 13.024 14.56C10.7142 15.4839 9.55936 15.9459 8.89971 15.4976C8.7433 15.3913 8.6084 15.2564 8.50212 15.1C8.05386 14.4404 8.51582 13.2855 9.43973 10.9757C9.6368 10.483 9.73533 10.2367 9.9048 10.0434C9.94799 9.99419 9.99435 9.94782 10.0436 9.90464C10.2368 9.73517 10.4832 9.63663 10.9759 9.43956C13.2856 8.51565 14.4405 8.0537 15.1002 8.50196C15.2566 8.60824 15.3915 8.74314 15.4978 8.89954C15.946 9.5592 15.4841 10.7141 14.5602 13.0239C14.3631 13.5165 14.2646 13.7629 14.0951 13.9561C14.0519 14.0054 14.0055 14.0517 13.9563 14.0949Z"
+                            fill="#ffffff"></path>
+                    </g>
+                </svg> Explore</button>
+            <button class="SidebarButtons" id="OpenTrending"><svg viewBox="0 0 24 24">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM16.88 11.53C16.88 11.92 16.57 12.23 16.18 12.23C15.79 12.23 15.48 11.92 15.48 11.53V11.35L12.76 14.07C12.61 14.22 12.41 14.29 12.2 14.27C11.99 14.25 11.8 14.14 11.69 13.96L10.67 12.44L8.29 14.82C8.15 14.96 7.98 15.02 7.8 15.02C7.62 15.02 7.44 14.95 7.31 14.82C7.04 14.55 7.04 14.11 7.31 13.83L10.29 10.85C10.44 10.7 10.64 10.63 10.85 10.65C11.06 10.67 11.25 10.78 11.36 10.96L12.38 12.48L14.49 10.37H14.31C13.92 10.37 13.61 10.06 13.61 9.67C13.61 9.28 13.92 8.97 14.31 8.97H16.17C16.26 8.97 16.35 8.99 16.44 9.02C16.61 9.09 16.75 9.23 16.82 9.4C16.86 9.49 16.87 9.58 16.87 9.67V11.53H16.88Z"
+                            fill="#ffffff"></path>
+                    </g>
+                </svg> Trending</button>
+            <button class="SidebarButtons" id="OpenPlaylist"><svg viewBox="0 0 24 24">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M18 5.25H6C5.59 5.25 5.25 4.91 5.25 4.5C5.25 4.09 5.59 3.75 6 3.75H18C18.41 3.75 18.75 4.09 18.75 4.5C18.75 4.91 18.41 5.25 18 5.25Z"
+                            fill="#ffffff"></path>
+                        <path
+                            d="M15 2.75H9C8.59 2.75 8.25 2.41 8.25 2C8.25 1.59 8.59 1.25 9 1.25H15C15.41 1.25 15.75 1.59 15.75 2C15.75 2.41 15.41 2.75 15 2.75Z"
+                            fill="#ffffff"></path>
+                        <path
+                            d="M13.9091 16.2109C13.5691 16.2109 13.2891 16.4909 13.2891 16.8309C13.2891 17.1709 13.5691 17.4509 13.9091 17.4509C14.2491 17.4509 14.5291 17.1709 14.5291 16.8309C14.5291 16.4909 14.2491 16.2109 13.9091 16.2109Z"
+                            fill="#ffffff"></path>
+                        <path
+                            d="M9.50953 17.7389C9.50953 17.3989 9.22953 17.1289 8.88953 17.1289C8.54953 17.1289 8.26953 17.4089 8.26953 17.7489C8.26953 18.0889 8.54953 18.3689 8.88953 18.3689C9.22953 18.3589 9.50953 18.0789 9.50953 17.7389Z"
+                            fill="#ffffff"></path>
+                        <path
+                            d="M18 7H6C3.8 7 2 8.8 2 11V18C2 20.2 3.8 22 6 22H18C20.2 22 22 20.2 22 18V11C22 8.8 20.2 7 18 7ZM16.03 12.46V16.83C16.03 16.85 16.02 16.86 16.02 16.88C15.99 18.02 15.06 18.95 13.91 18.95C12.74 18.95 11.79 18 11.79 16.83C11.79 15.66 12.74 14.71 13.91 14.71C14.13 14.71 14.33 14.75 14.53 14.81V13.44L11.01 14.4V17.73V17.74C11.01 18.91 10.06 19.86 8.89 19.86C7.72 19.86 6.77 18.91 6.77 17.74C6.77 16.57 7.72 15.62 8.89 15.62C9.11 15.62 9.31 15.66 9.51 15.72V13.82V12.22C9.51 11.33 10.06 10.61 10.91 10.39L13.64 9.64C14.52 9.41 15.06 9.64 15.37 9.88C15.67 10.11 16.03 10.58 16.03 11.47V12.46Z"
+                            fill="#ffffff"></path>
+                    </g>
+                </svg> library</button>
+        </nav>
+    </div>
+
+    <div class="player">
+        <div class="bar1" id="bar1">
+            <input type="range" min="0" max="100" class="seekControl">
+            <div class="seek" id="seek"></div>
+        </div>
+
+        <div class="player-detail">
+            <div class="song-detail touchSongDetail player-in-box">
+                <div class="img-section">
+                    <img class="img" crossOrigin="anonymous" src="./img/poster.jpg" alt="">
+                </div>
+                <div class="detail">
+                    <h4 class="player-song-name"></h4>
+                    <h5 class="player-artist-name"></h5>
+                </div>
+            </div>
+            <div class="player-control player-in-box">
+                <button class="prev"><svg viewBox="0 0 24 24">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" color="currentColor">
+                            <path
+                                d="M2.163 12.918c.282.77 1.136 1.387 2.842 2.62c2.327 1.68 3.49 2.52 4.464 2.459a2.7 2.7 0 0 0 1.909-.965C12 16.286 12 14.858 12 12s0-4.286-.622-5.032a2.7 2.7 0 0 0-1.91-.965c-.972-.061-2.136.779-4.463 2.46c-1.706 1.232-2.56 1.849-2.842 2.62a2.67 2.67 0 0 0 0 1.835" />
+                            <path
+                                d="M12.163 12.918c.282.77 1.136 1.387 2.842 2.62c2.327 1.68 3.49 2.52 4.464 2.459a2.7 2.7 0 0 0 1.909-.965C22 16.286 22 14.858 22 12s0-4.286-.622-5.032a2.7 2.7 0 0 0-1.91-.965c-.972-.061-2.136.779-4.463 2.46c-1.706 1.232-2.56 1.849-2.842 2.62a2.67 2.67 0 0 0 0 1.835" />
+                        </g>
+                    </svg></button>
+                <button class="play-pause playBtn"><svg viewBox="0 0 24 24">
+                        <g fill="none">
+                            <path fill="none"
+                                d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                            <path class="fill"
+                                d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2M8.964 8.65l-.053.5l-.03.333l-.042.6l-.024.46l-.018.505l-.01.549v.578l.01.549l.018.506l.024.46l.042.6l.071.73l.013.102a1.192 1.192 0 0 0 1.651.954l.456-.202l.651-.309l.39-.196l.43-.224l.466-.253l.498-.282l.493-.29l.231-.14l.43-.27l.388-.25l.342-.229l.653-.46l.177-.131a1.192 1.192 0 0 0-.001-1.908l-.406-.297l-.275-.193l-.32-.218l-.565-.368l-.428-.268l-.47-.282l-.499-.288l-.478-.265l-.447-.238l-.41-.21l-.54-.263l-.439-.202l-.23-.102a16.814 16.814 0 0 0-.095-.04a1.192 1.192 0 0 0-1.654.952" />
+                        </g>
+                    </svg>
+                    <button class="play-pause pauseBtn"><svg viewBox="0 0 56 56">
+                            <path fill="currentColor" class="fill"
+                                d="M28 51.906c13.055 0 23.906-10.828 23.906-23.906c0-13.055-10.875-23.906-23.93-23.906C14.899 4.094 4.095 14.945 4.095 28c0 13.078 10.828 23.906 23.906 23.906m-6.14-15.445c-1.079 0-1.548-.563-1.548-1.43V20.992c0-.844.47-1.43 1.547-1.43h2.133c1.078 0 1.547.586 1.547 1.43v14.04c0 .866-.469 1.429-1.547 1.429Zm10.124 0c-1.054 0-1.57-.563-1.57-1.43V20.992c0-.844.516-1.43 1.57-1.43h2.133c1.055 0 1.547.586 1.547 1.43v14.04c0 .866-.492 1.429-1.547 1.429Z" />
+                        </svg></button>
+                </button>
+                <button class="next"><svg viewBox="0 0 24 24">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" color="currentColor">
+                            <path
+                                d="M21.837 12.918c-.282.77-1.136 1.387-2.842 2.62c-2.327 1.68-3.49 2.52-4.464 2.459a2.7 2.7 0 0 1-1.909-.965C12 16.286 12 14.858 12 12s0-4.286.622-5.032a2.7 2.7 0 0 1 1.91-.965c.972-.061 2.136.779 4.463 2.46c1.706 1.232 2.56 1.849 2.842 2.62a2.67 2.67 0 0 1 0 1.835" />
+                            <path
+                                d="M11.837 12.918c-.282.77-1.136 1.387-2.842 2.62c-2.327 1.68-3.49 2.52-4.464 2.459a2.7 2.7 0 0 1-1.909-.965C2 16.286 2 14.858 2 12s0-4.286.622-5.032a2.7 2.7 0 0 1 1.91-.965c.972-.061 2.136.779 4.463 2.46c1.706 1.232 2.56 1.849 2.842 2.62a2.67 2.67 0 0 1 0 1.835" />
+                        </g>
+                    </svg></button>
+            </div>
+            <div class="sound-control player-in-box">
+                <div class="songFullTimer ">
+                    <p class="current"></p>
+                    <p style="padding: 0 5px;"> / </p>
+                    <p class="duration"></p>
+                </div>
+                <div class="sound-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <g fill="currentColor" fill-rule="evenodd" stroke-width="1.5" clip-rule="evenodd">
+                            <path
+                                d="M16.97 6.97a.75.75 0 0 1 1.06 0l-.53.53l.53-.53h.001l.001.002l.003.002l.007.007l.02.02l.062.069c.05.057.12.138.201.241A6.87 6.87 0 0 1 19.75 11.5a6.87 6.87 0 0 1-1.425 4.189a5 5 0 0 1-.264.31l-.02.02l-.006.007l-.003.002v.001h-.001l-.51-.508l.51.51a.75.75 0 1 1-1.061-1.061l.53.53l-.53-.53h-.001v.001l-.002.001l.005-.005l.033-.036q.048-.052.139-.167a5.37 5.37 0 0 0 .448-5.843a5 5 0 0 0-.448-.685a3 3 0 0 0-.172-.203l-.005-.005a.75.75 0 0 1 .003-1.058" />
+                            <path
+                                d="M19.97 3.97a.75.75 0 0 1 1.06 0l-.53.53l.53-.53h.001l.002.002l.003.003l.009.01a2 2 0 0 1 .124.134c.079.089.188.218.316.385c.257.333.594.823.929 1.46c.67 1.274 1.336 3.143 1.336 5.536s-.666 4.262-1.336 5.537a10 10 0 0 1-.929 1.46a7 7 0 0 1-.44.518l-.01.01l-.002.003l-.002.001l-.531-.529l.53.53a.75.75 0 0 1-1.061-1.06v.001h-.001l.001-.001l.014-.014l.063-.07q.089-.098.25-.304c.212-.276.5-.693.79-1.244c.58-1.1 1.164-2.731 1.164-4.838s-.584-3.738-1.164-4.838a8.7 8.7 0 0 0-.79-1.244a6 6 0 0 0-.313-.374l-.014-.014l-.001-.002v.002h.001a.75.75 0 0 1 0-1.06m-7.932-.574c1.163-.767 2.713.068 2.713 1.461v14.286c0 1.394-1.55 2.228-2.713 1.461l-6-3.955a.25.25 0 0 0-.137-.042H3a2.75 2.75 0 0 1-2.75-2.75v-3.714A2.75 2.75 0 0 1 3 7.393h2.9a.25.25 0 0 0 .138-.041z" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="Soundbar" id="bar1">
+                    <input type="range" value="100" min="0" max="100" class="soundSeekControl">
+                    <div class="soundSeek"></div>
+                </div>
+                <button class="maxPlayer max-min">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" d="M8 20H4m0 0v-4m0 4l6-6m6-10h4m0 0v4m0-4l-6 6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="fullScreenPlayer">
+        <img class="backdrop" src="./img/poster.jpg" alt="">
+
+        <div class="player-full">
+
+            <div class="player-detail-full">
+                <img class="img averageImg" crossorigin="anonymous" src="./img/poster.jpg" alt="">
+                <div class="song-full-detail">
+                    <h2 class="player-song-name"></h2>
+                    <h3 class="player-artist-name"></h3>
+                </div>
+            </div>
+
+            <div class="bar1" id="bar1">
+                <input type="range" min="0" max="100" class="seekControl">
+                <div class="seek" id="seek"></div>
+                <div class="dot"></div>
+
+            </div>
+
+            <div class="full-controls">
+                <div class="songFullTimer ">
+                    <p class="current">03:40</p>
+                    <p style="padding: 0 5px;"> / </p>
+                    <p class="duration">24:90</p>
+                </div>
+
+                <div class="player-control ">
+                    <button class="prev"><svg viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5" color="currentColor">
+                                <path
+                                    d="M2.163 12.918c.282.77 1.136 1.387 2.842 2.62c2.327 1.68 3.49 2.52 4.464 2.459a2.7 2.7 0 0 0 1.909-.965C12 16.286 12 14.858 12 12s0-4.286-.622-5.032a2.7 2.7 0 0 0-1.91-.965c-.972-.061-2.136.779-4.463 2.46c-1.706 1.232-2.56 1.849-2.842 2.62a2.67 2.67 0 0 0 0 1.835" />
+                                <path
+                                    d="M12.163 12.918c.282.77 1.136 1.387 2.842 2.62c2.327 1.68 3.49 2.52 4.464 2.459a2.7 2.7 0 0 0 1.909-.965C22 16.286 22 14.858 22 12s0-4.286-.622-5.032a2.7 2.7 0 0 0-1.91-.965c-.972-.061-2.136.779-4.463 2.46c-1.706 1.232-2.56 1.849-2.842 2.62a2.67 2.67 0 0 0 0 1.835" />
+                            </g>
+                        </svg></button>
+                    <button class="play-pause playBtn"><svg viewBox="0 0 24 24">
+                            <g fill="none">
+                                <path fill="none"
+                                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                <path class="fill"
+                                    d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2M8.964 8.65l-.053.5l-.03.333l-.042.6l-.024.46l-.018.505l-.01.549v.578l.01.549l.018.506l.024.46l.042.6l.071.73l.013.102a1.192 1.192 0 0 0 1.651.954l.456-.202l.651-.309l.39-.196l.43-.224l.466-.253l.498-.282l.493-.29l.231-.14l.43-.27l.388-.25l.342-.229l.653-.46l.177-.131a1.192 1.192 0 0 0-.001-1.908l-.406-.297l-.275-.193l-.32-.218l-.565-.368l-.428-.268l-.47-.282l-.499-.288l-.478-.265l-.447-.238l-.41-.21l-.54-.263l-.439-.202l-.23-.102a16.814 16.814 0 0 0-.095-.04a1.192 1.192 0 0 0-1.654.952" />
+                            </g>
+                        </svg>
+                        <button class="play-pause pauseBtn"><svg viewBox="0 0 56 56">
+                                <path fill="currentColor" class="fill"
+                                    d="M28 51.906c13.055 0 23.906-10.828 23.906-23.906c0-13.055-10.875-23.906-23.93-23.906C14.899 4.094 4.095 14.945 4.095 28c0 13.078 10.828 23.906 23.906 23.906m-6.14-15.445c-1.079 0-1.548-.563-1.548-1.43V20.992c0-.844.47-1.43 1.547-1.43h2.133c1.078 0 1.547.586 1.547 1.43v14.04c0 .866-.469 1.429-1.547 1.429Zm10.124 0c-1.054 0-1.57-.563-1.57-1.43V20.992c0-.844.516-1.43 1.57-1.43h2.133c1.055 0 1.547.586 1.547 1.43v14.04c0 .866-.492 1.429-1.547 1.429Z" />
+                            </svg></button>
+                    </button>
+                    <button class="next"><svg viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5" color="currentColor">
+                                <path
+                                    d="M21.837 12.918c-.282.77-1.136 1.387-2.842 2.62c-2.327 1.68-3.49 2.52-4.464 2.459a2.7 2.7 0 0 1-1.909-.965C12 16.286 12 14.858 12 12s0-4.286.622-5.032a2.7 2.7 0 0 1 1.91-.965c.972-.061 2.136.779 4.463 2.46c1.706 1.232 2.56 1.849 2.842 2.62a2.67 2.67 0 0 1 0 1.835" />
+                                <path
+                                    d="M11.837 12.918c-.282.77-1.136 1.387-2.842 2.62c-2.327 1.68-3.49 2.52-4.464 2.459a2.7 2.7 0 0 1-1.909-.965C2 16.286 2 14.858 2 12s0-4.286.622-5.032a2.7 2.7 0 0 1 1.91-.965c.972-.061 2.136.779 4.463 2.46c1.706 1.232 2.56 1.849 2.842 2.62a2.67 2.67 0 0 1 0 1.835" />
+                            </g>
+                        </svg></button>
+                </div>
+
+
+                <div class="sound-control">
+                    <div class="sound-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="currentColor" fill-rule="evenodd" stroke-width="1.5" clip-rule="evenodd">
+                                <path
+                                    d="M16.97 6.97a.75.75 0 0 1 1.06 0l-.53.53l.53-.53h.001l.001.002l.003.002l.007.007l.02.02l.062.069c.05.057.12.138.201.241A6.87 6.87 0 0 1 19.75 11.5a6.87 6.87 0 0 1-1.425 4.189a5 5 0 0 1-.264.31l-.02.02l-.006.007l-.003.002v.001h-.001l-.51-.508l.51.51a.75.75 0 1 1-1.061-1.061l.53.53l-.53-.53h-.001v.001l-.002.001l.005-.005l.033-.036q.048-.052.139-.167a5.37 5.37 0 0 0 .448-5.843a5 5 0 0 0-.448-.685a3 3 0 0 0-.172-.203l-.005-.005a.75.75 0 0 1 .003-1.058" />
+                                <path
+                                    d="M19.97 3.97a.75.75 0 0 1 1.06 0l-.53.53l.53-.53h.001l.002.002l.003.003l.009.01a2 2 0 0 1 .124.134c.079.089.188.218.316.385c.257.333.594.823.929 1.46c.67 1.274 1.336 3.143 1.336 5.536s-.666 4.262-1.336 5.537a10 10 0 0 1-.929 1.46a7 7 0 0 1-.44.518l-.01.01l-.002.003l-.002.001l-.531-.529l.53.53a.75.75 0 0 1-1.061-1.06v.001h-.001l.001-.001l.014-.014l.063-.07q.089-.098.25-.304c.212-.276.5-.693.79-1.244c.58-1.1 1.164-2.731 1.164-4.838s-.584-3.738-1.164-4.838a8.7 8.7 0 0 0-.79-1.244a6 6 0 0 0-.313-.374l-.014-.014l-.001-.002v.002h.001a.75.75 0 0 1 0-1.06m-7.932-.574c1.163-.767 2.713.068 2.713 1.461v14.286c0 1.394-1.55 2.228-2.713 1.461l-6-3.955a.25.25 0 0 0-.137-.042H3a2.75 2.75 0 0 1-2.75-2.75v-3.714A2.75 2.75 0 0 1 3 7.393h2.9a.25.25 0 0 0 .138-.041z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="Soundbar" id="bar1">
+                        <input type="range" value="100" min="0" max="100" class="soundSeekControl">
+                        <div class="soundSeek"></div>
+                    </div>
+                    <button class="minPlayer max-min">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M11.943 1.25h.114c2.309 0 4.118 0 5.53.19c1.444.194 2.584.6 3.479 1.494c.895.895 1.3 2.035 1.494 3.48c.19 1.411.19 3.22.19 5.529v.114c0 2.309 0 4.118-.19 5.53c-.194 1.444-.6 2.584-1.494 3.479c-.829.828-1.868 1.238-3.167 1.448c-1.277.207-2.883.232-4.898.235a.75.75 0 1 1-.002-1.5c2.04-.003 3.523-.031 4.66-.216c1.117-.18 1.818-.5 2.346-1.028c.57-.57.897-1.34 1.069-2.619c.174-1.3.176-3.008.176-5.386s-.002-4.086-.177-5.386c-.171-1.279-.498-2.05-1.068-2.62c-.57-.569-1.34-.896-2.619-1.068c-1.3-.174-3.008-.176-5.386-.176s-4.087.002-5.387.176c-1.278.172-2.049.5-2.618 1.069c-.529.528-.848 1.23-1.028 2.345c-.185 1.138-.213 2.621-.217 4.661A.75.75 0 0 1 1.25 11c.004-2.016.03-3.622.236-4.898c.21-1.3.62-2.338 1.448-3.167c.895-.895 2.035-1.3 3.48-1.494c1.411-.19 3.22-.19 5.529-.19" />
+                            <path fill="currentColor"
+                                d="M16.5 12a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75V8.25a.75.75 0 0 1 1.5 0v1.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-3.72 3.72h1.94a.75.75 0 0 1 .75.75" />
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M5.948 13.25c-.898 0-1.648 0-2.242.08c-.628.084-1.195.27-1.65.726c-.456.455-.642 1.022-.726 1.65c-.08.594-.08 1.343-.08 2.242v.104c0 .899 0 1.648.08 2.242c.084.628.27 1.195.725 1.65c.456.456 1.023.642 1.65.726c.595.08 1.345.08 2.243.08h.104c.898 0 1.648 0 2.242-.08c.628-.084 1.195-.27 1.65-.726c.456-.455.642-1.022.726-1.65c.08-.594.08-1.343.08-2.242v-.104c0-.899 0-1.648-.08-2.242c-.084-.628-.27-1.195-.725-1.65c-.456-.456-1.023-.642-1.65-.726c-.595-.08-1.345-.08-2.243-.08zm-2.832 1.866c.13-.13.328-.237.79-.3c.482-.064 1.13-.066 2.094-.066s1.612.002 2.095.066c.461.063.659.17.789.3c.13.13.237.328.3.79c.064.482.066 1.13.066 2.094s-.002 1.612-.067 2.095c-.062.461-.169.659-.3.789c-.13.13-.327.237-.788.3c-.483.064-1.131.066-2.095.066c-.964 0-1.612-.002-2.095-.067c-.461-.062-.659-.169-.789-.3c-.13-.13-.237-.327-.3-.788c-.064-.483-.066-1.131-.066-2.095c0-.964.002-1.612.067-2.095c.062-.461.169-.659.3-.789"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="SongDeepDetail">
+
+            
+            <div class="artistSection">
+                    <h3 class="textDiff">Song Detail</h3>
+                    <h6 class=" textDiff">Singer</h6>
+                    <div class="artistDetail">
+                        <div class="img-section">
+                            <img src=""class="PrimaryArtistImg" alt="">
+                        </div>
+                        <div class="ArtistName"><span class="PrimaryArtistName"></span></div>
+                    </div>
+                    <h6 class=" textDiff">Other Artist</h6>
+                    <div><span class="player-artist-name"></span></div>
+                    <h6 class=" textDiff">Play count</h6>
+                    <div><span class="playCount"></span></div>
+                    <h6 class=" textDiff">Label</h6>
+                    <div> <span class="labelDeepDetail"></span></div>
+                    <h6 class=" textDiff">Album</h6>
+                    <div> <span class="AlbumNameDeepDetail"></span></div>
+                </div>
+        </div>
+        <div class="SongQueue">
+        </div>
+
+
+
+        <div class="box-shadow"></div>
+    </div>
+    </div>
+
+
+
+
+    <section class="layout">
+        <section class="sidebar layout-part">
+
+            <div class="logo"><img src="./svg/logo.png" alt=""></div>
+
+            <nav>
+                <button class="SidebarButtons active" id="OpenHome"><svg viewBox="0 0 24 24">
+                        <path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M20 19v-8.5a1 1 0 0 0-.4-.8l-7-5.25a1 1 0 0 0-1.2 0l-7 5.25a1 1 0 0 0-.4.8V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1" />
+                    </svg> Home</button>
+                <button class="SidebarButtons" id="OpenExplore"><svg viewBox="0 0 24 24" fill="none">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM13.9563 14.0949C13.763 14.2644 13.5167 14.3629 13.024 14.56C10.7142 15.4839 9.55936 15.9459 8.89971 15.4976C8.7433 15.3913 8.6084 15.2564 8.50212 15.1C8.05386 14.4404 8.51582 13.2855 9.43973 10.9757C9.6368 10.483 9.73533 10.2367 9.9048 10.0434C9.94799 9.99419 9.99435 9.94782 10.0436 9.90464C10.2368 9.73517 10.4832 9.63663 10.9759 9.43956C13.2856 8.51565 14.4405 8.0537 15.1002 8.50196C15.2566 8.60824 15.3915 8.74314 15.4978 8.89954C15.946 9.5592 15.4841 10.7141 14.5602 13.0239C14.3631 13.5165 14.2646 13.7629 14.0951 13.9561C14.0519 14.0054 14.0055 14.0517 13.9563 14.0949Z"
+                                fill="#ffffff"></path>
+                        </g>
+                    </svg> Explore</button>
+                <button class="SidebarButtons" id="OpenTrending"><svg viewBox="0 0 24 24">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM16.88 11.53C16.88 11.92 16.57 12.23 16.18 12.23C15.79 12.23 15.48 11.92 15.48 11.53V11.35L12.76 14.07C12.61 14.22 12.41 14.29 12.2 14.27C11.99 14.25 11.8 14.14 11.69 13.96L10.67 12.44L8.29 14.82C8.15 14.96 7.98 15.02 7.8 15.02C7.62 15.02 7.44 14.95 7.31 14.82C7.04 14.55 7.04 14.11 7.31 13.83L10.29 10.85C10.44 10.7 10.64 10.63 10.85 10.65C11.06 10.67 11.25 10.78 11.36 10.96L12.38 12.48L14.49 10.37H14.31C13.92 10.37 13.61 10.06 13.61 9.67C13.61 9.28 13.92 8.97 14.31 8.97H16.17C16.26 8.97 16.35 8.99 16.44 9.02C16.61 9.09 16.75 9.23 16.82 9.4C16.86 9.49 16.87 9.58 16.87 9.67V11.53H16.88Z"
+                                fill="#ffffff"></path>
+                        </g>
+                    </svg> Trending</button>
+                <button class="SidebarButtons" id="OpenPlaylist"><svg viewBox="0 0 24 24">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M18 5.25H6C5.59 5.25 5.25 4.91 5.25 4.5C5.25 4.09 5.59 3.75 6 3.75H18C18.41 3.75 18.75 4.09 18.75 4.5C18.75 4.91 18.41 5.25 18 5.25Z"
+                                fill="#ffffff"></path>
+                            <path
+                                d="M15 2.75H9C8.59 2.75 8.25 2.41 8.25 2C8.25 1.59 8.59 1.25 9 1.25H15C15.41 1.25 15.75 1.59 15.75 2C15.75 2.41 15.41 2.75 15 2.75Z"
+                                fill="#ffffff"></path>
+                            <path
+                                d="M13.9091 16.2109C13.5691 16.2109 13.2891 16.4909 13.2891 16.8309C13.2891 17.1709 13.5691 17.4509 13.9091 17.4509C14.2491 17.4509 14.5291 17.1709 14.5291 16.8309C14.5291 16.4909 14.2491 16.2109 13.9091 16.2109Z"
+                                fill="#ffffff"></path>
+                            <path
+                                d="M9.50953 17.7389C9.50953 17.3989 9.22953 17.1289 8.88953 17.1289C8.54953 17.1289 8.26953 17.4089 8.26953 17.7489C8.26953 18.0889 8.54953 18.3689 8.88953 18.3689C9.22953 18.3589 9.50953 18.0789 9.50953 17.7389Z"
+                                fill="#ffffff"></path>
+                            <path
+                                d="M18 7H6C3.8 7 2 8.8 2 11V18C2 20.2 3.8 22 6 22H18C20.2 22 22 20.2 22 18V11C22 8.8 20.2 7 18 7ZM16.03 12.46V16.83C16.03 16.85 16.02 16.86 16.02 16.88C15.99 18.02 15.06 18.95 13.91 18.95C12.74 18.95 11.79 18 11.79 16.83C11.79 15.66 12.74 14.71 13.91 14.71C14.13 14.71 14.33 14.75 14.53 14.81V13.44L11.01 14.4V17.73V17.74C11.01 18.91 10.06 19.86 8.89 19.86C7.72 19.86 6.77 18.91 6.77 17.74C6.77 16.57 7.72 15.62 8.89 15.62C9.11 15.62 9.31 15.66 9.51 15.72V13.82V12.22C9.51 11.33 10.06 10.61 10.91 10.39L13.64 9.64C14.52 9.41 15.06 9.64 15.37 9.88C15.67 10.11 16.03 10.58 16.03 11.47V12.46Z"
+                                fill="#ffffff"></path>
+                        </g>
+                    </svg> library</button>
+            </nav>
+
+
+            <div class="library">
+                <div class="header">
+                    <h4>Library</h4>
+                </div>
+            </div>
+
+        </section>
+        <section class="main-section layout-part">
+
+            <div class="main-section-content Home-content">
+                <div class="trend">
+                    <h4>Trending Today 🔝</h4>
+
+                    <div class="cardSlider" id="cardSlider1">
+                        <button class="prevBtn" id="cardSButton" onclick="cardS('cardSlider1', -1)">&#10094;</button>
+                        <div class="card-section">
+                            <div class="cardSlides TrendingTodayFetch TazaTune">
+                            </div>
+                        </div>
+                        <button class="nextBtn" id="cardSButton" onclick="cardS('cardSlider1', 1)">&#10095;</button>
+                    </div>
+                    <h4>Trending Romantic ❤</h4>
+                    <div class="cardSlider" id="cardSlider2">
+                        <button class="prevBtn" id="cardSButton" onclick="cardS('cardSlider2', -2)">&#10094;</button>
+                        <div class="card-section">
+                            <div class="cardSlides TrendingTodayFetch Romantic">
+                            </div>
+                        </div>
+                        <button class="nextBtn" id="cardSButton" onclick="cardS('cardSlider2', 2)">&#10095;</button>
+                    </div>
+                    <h4>Trending Pop songs 🎼</h4>
+                    <div class="cardSlider" id="cardSlider3">
+                        <button class="prevBtn" id="cardSButton" onclick="cardS('cardSlider3', -3)">&#10094;</button>
+                        <div class="card-section">
+                            <div class="cardSlides pop">
+                            </div>
+                        </div>
+                        <button class="nextBtn" id="cardSButton" onclick="cardS('cardSlider3', 3)">&#10095;</button>
+                    </div>
+                    <h4>Trending 🎶</h4>
+                    <div class="cardSlider" id="cardSlider4">
+                        <button class="prevBtn" id="cardSButton" onclick="cardS('cardSlider4', -4)">&#10094;</button>
+                        <div class="card-section">
+                            <div class="cardSlides nach">
+                            </div>
+                        </div>
+                        <button class="nextBtn" id="cardSButton" onclick="cardS('cardSlider4', 4)">&#10095;</button>
+                    </div>
+                    <h4>Trending Ishqiyaan 💟</h4>
+                    <div class="cardSlider" id="cardSlider5">
+                        <button class="prevBtn" id="cardSButton" onclick="cardS('cardSlider5', -5)">&#10094;</button>
+                        <div class="card-section">
+                            <div class="cardSlides Ishqiyaan">
+                            </div>
+                        </div>
+                        <button class="nextBtn" id="cardSButton" onclick="cardS('cardSlider5', 5)">&#10095;</button>
+                    </div>
+                    <h4>Trending Playlist</h4>
+                    <div class="cardSlider" id="cardSlider6">
+                        <button class="prevBtn" id="cardSButton" onclick="cardS('cardSlider6', -6)">&#10094;</button>
+                        <div class="card-section">
+                            <div class="cardSlides Playlist-card-section">
+                            </div>
+                        </div>
+                        <button class="nextBtn" id="cardSButton" onclick="cardS('cardSlider6', 6)">&#10095;</button>
+                    </div>
+                </div>
+
+
+                <div class="Playlist-card-section Song-Playlist-section">
+                </div>
+            </div>
+
+            <div class="main-section-content Explore-section">
+                <header>
+                    <div class="search-bar">
+                        <input type="search" placeholder="looking for Song,Album,playlist,Artist" name="Search"
+                            id="SearchBar" class="search">
+                        <button>
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39M11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="searchFilter">
+                        <button class="song active">Song</button>
+                        <button class="album">Album</button>
+                        <button class="playlist">Playlist</button>
+                        <button class="artist">Artist</button>
+                    </div>
+                </header>
+
+                <div class="song-section searchSubSection active">
+                    <div class="SerchDefultMessage">Search Song Please</div>
+                </div>
+                <div class="album-section searchSubSection">
+                    <div class="SerchDefultMessage">Search album Please</div>
+                </div>
+                <div class="playlist-section searchSubSection">
+                    <div class="SerchDefultMessage">Search playlist Please</div>
+                </div>
+                <div class="artist-section searchSubSection">
+                    <div class="SerchDefultMessage">Search artist Please</div>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="main-section-content Trending-section"></div>
+            <div class="main-section-content CurrentPlaylist-section">
+                <div class="header">
+                    <img src="./img/poster.jpg" alt="" class="ShawPlayBack">
+                    <div class="in-part">
+                        <div class="img-section">
+                            <img class="AlbumFirstImg" crossorigin="anonymous" src="./img/poster.jpg" alt="">
+                        </div>
+                        <div class="header-detail">
+                            <h5 class="headerType">Playlist</h5>
+                            <h1 class="headerName">Playlist name Playlist name Playlist name</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="Playlist-card-section PlaylistSongs AlbumCardSection">
+                    <div class="AlbumPlaylistSongCard">
+                        <div class="inner-card">
+                            <div class="Albumimg-section">
+                                <img class="img" crossorigin="anonymous" src="./img/poster.jpg" alt="">
+                            </div>
+                            <div class="nameAndArtist">
+                                <h4>name</h4>
+                                <h5>Artist</h5>
+                            </div>
+                            <div class="Album">
+                                album name
+                            </div>
+                            <div class="duration">
+                                0:00
+                            </div>
+                        </div>
+                        <div class="seek"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section-content Artist-section">
+                <div class="header">
+                    <img src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg" alt=""
+                        class="backimg ArtistImg">
+                    <div class="detail">
+                        <div class="img-section">
+                            <img class="ArtistImg"
+                                src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg" alt="">
+                        </div>
+                        <div class="Artist-detail">
+                            <h1 class="ArtistSectionName">Arijit Singh</h1>
+                            <h4 class="TotalTimeOfDuration">Total Play time: 12:05:40</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="ArtistSong-section">
+
+                </div>
+            </div>
+            <div class="main-section-content Album-section">
+                <div class="header">
+                    <img src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg" alt=""
+                        class="backimg ArtistImg">
+                    <div class="detail">
+                        <div class="img-section">
+                            <img class="ArtistImg"
+                                src="https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg" alt="">
+                        </div>
+                        <div class="Artist-detail">
+                            <h1 class="ArtistSectionName">Arijit Singh</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="ArtistSong-section">
+
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

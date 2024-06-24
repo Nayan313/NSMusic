@@ -1,0 +1,31 @@
+async function AlbumPlay(SongPlaylistId, ClickedPlayListSong) {
+  let SongCards = document.querySelectorAll(".AlbumPlayCard");
+
+  SongCards.forEach((card) => {
+    card.addEventListener("click", (event) => {
+      const SongId = event.currentTarget.id;
+      console.log("SongId is " + SongId);
+      const SongDatas = ClickedPlayListSong.filter((obj) => obj.id === SongId);
+      console.log("Filtered SongData:", SongDatas);
+      console.log(SongPlaylistId);
+      console.log(SongDatas);
+      console.log(ClickedPlayListSong);
+      let PlaylistId = SongPlaylistId;
+      const SongPlaylistDataId = playlistArr.filter(
+        (obj) => obj.PlaylistId === SongPlaylistId
+      );
+      console.log(SongPlaylistDataId);
+      console.log("Song dta");
+      let SongLink = SongDatas[0];
+      console.log(SongLink);
+      const url = SongLink.downloadUrl[4].url;
+      let FindIn = ClickedPlayListSong.findIndex((obj) => obj.id == SongId);
+      console.log("SongCurrentIndex" + FindIn);
+      SongCurrentIndex = FindIn;
+      audioPlayer.src = url;
+      console.log(ClickedPlayListSong);
+      UpdateSongInfo(SongLink, PlaylistId, ClickedPlayListSong);
+      queueSong(ClickedPlayListSong, SongId, PlaylistId);
+    });
+  });
+}
