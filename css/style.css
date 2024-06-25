@@ -1100,9 +1100,10 @@ button.nextBtn {
     }
 
      
-    
-    .logo1 img {
+    .logo1{
         display: block;
+    }
+    .logo1 img {
         width: 160px;
         margin: 20px 15px;
     }
@@ -1110,16 +1111,18 @@ button.nextBtn {
     .bottom-nav {
         display: flex;
     }
-
+    .player-control{
+        margin: 16px 0;
+    }
     .player {
         display: flex;
         flex-direction: column-reverse;
         bottom: 65px;
-        width: 93%;
+        width: 96%;
         height: 9vh;
         opacity: 0;
         left: 50%;
-        transform: translateX(-51%);
+        transform: translateX(-50%);
     }
 
     .playerActive {
@@ -1136,7 +1139,7 @@ button.nextBtn {
     }
 
     .LayoutActive {
-        height: 84.5vh;
+        height: 76.5vh;
     }
 
     .fullScreenPlayer {

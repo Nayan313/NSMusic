@@ -670,7 +670,7 @@ async function queueSong(ClickedPlayListSong, SongId, PlaylistId) {
   </div>`;
   }
   document.querySelector(".SongQueue").innerHTML =
-    "<h3> Queue </h3>" + QueueCard;
+    `<h3 style="padding:10px 0;"> Related songs </h3>` + QueueCard;
   console.log(queueArr);
   console.log(PrevQue);
   let SongCards = document.querySelectorAll(".SongQueueCard");

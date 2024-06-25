@@ -167,7 +167,7 @@ async function UpdateSongInfo(SongLink, PlaylistId,ClickedPlayListSong) {
   console.log("SongLink");
   console.log("SongLink");
   console.log(SongLink);
-
+document.title = SongLink.name + " | Nayan Sukhadiya"
   audioPlayer.src = url;
   SongName.forEach((update) => {
     update.innerHTML = SongLink.name;
@@ -203,7 +203,7 @@ document.querySelector(".AlbumNameDeepDetail").innerHTML = SongLink.album.name;
     updateArtist.innerHTML = ArtistNameArr.toLocaleString();
   });
   PosterImg.forEach((updateImg) => {
-    updateImg.src = SongLink.image[2].url;
+    updateImg.src = SongLink.image[1].url;
   });
   playBtn.forEach((e) => {
     e.style.display = "none";
