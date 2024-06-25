@@ -183,7 +183,7 @@ document.title = SongLink.name + " | Nayan Sukhadiya"
         this.onerror = null;
         this.src = './img/poster.jpg';
     };
-    artistImgElement.src = SongLink.artists.primary[0].image[2].url;
+    artistImgElement.src = SongLink.artists.primary[0].image[1].url;
 } catch (error) {
     console.error('Error setting the artist image:', error);
     const artistImgElement = document.querySelector(".PrimaryArtistImg");
@@ -203,7 +203,7 @@ document.querySelector(".AlbumNameDeepDetail").innerHTML = SongLink.album.name;
     updateArtist.innerHTML = ArtistNameArr.toLocaleString();
   });
   PosterImg.forEach((updateImg) => {
-    updateImg.src = SongLink.image[1].url;
+    updateImg.src = SongLink.image[2].url;
   });
   playBtn.forEach((e) => {
     e.style.display = "none";
