@@ -52,7 +52,7 @@ next.forEach((action) => {
     }
     let SongLink = playArr[SongCurrentIndex];
     UpdateSongInfo(SongLink);
-    console.log("CurrentIndexIsThe" + SongCurrentIndex);
+    // console.log("CurrentIndexIsThe" + SongCurrentIndex);
   });
 });
 
@@ -163,10 +163,10 @@ let PosterImg = document.querySelectorAll(".img");
 async function UpdateSongInfo(SongLink, PlaylistId,ClickedPlayListSong) {
   audioPlayer.pause();
   const url = SongLink.downloadUrl[4].url;
-  console.log("SongLink");
-  console.log("SongLink");
-  console.log("SongLink");
-  console.log(SongLink);
+  // console.log("SongLink");
+  // console.log("SongLink");
+  // console.log("SongLink");
+  // console.log(SongLink);
 document.title = SongLink.name + " | Nayan Sukhadiya"
   audioPlayer.src = url;
   SongName.forEach((update) => {
@@ -183,7 +183,7 @@ document.title = SongLink.name + " | Nayan Sukhadiya"
         this.onerror = null;
         this.src = './img/poster.jpg';
     };
-    artistImgElement.src = SongLink.artists.primary[0].image[1].url;
+    artistImgElement.src = SongLink.artists.primary[0].image[2].url;
 } catch (error) {
     console.error('Error setting the artist image:', error);
     const artistImgElement = document.querySelector(".PrimaryArtistImg");
@@ -203,7 +203,7 @@ document.querySelector(".AlbumNameDeepDetail").innerHTML = SongLink.album.name;
     updateArtist.innerHTML = ArtistNameArr.toLocaleString();
   });
   PosterImg.forEach((updateImg) => {
-    updateImg.src = SongLink.image[2].url;
+    updateImg.src = SongLink.image[1].url;
   });
   playBtn.forEach((e) => {
     e.style.display = "none";

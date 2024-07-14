@@ -53,7 +53,7 @@ async function homePage() {
         const TrendingToday = playlistData.data.results.filter(
           (obj) => obj.name === arrayObject.js
         );
-        console.log(TrendingToday);
+        // console.log(TrendingToday);
         if (TrendingToday.length === 0) {
           PlaylistId = playlistData.data.results[0].id;
           PlaylistLimit = playlistData.data.results[0].songCount;
@@ -62,7 +62,7 @@ async function homePage() {
           PlaylistLimit = TrendingToday[0].songCount;
         }
         AlbumFetchName = arrayObject.html;
-        console.log(AlbumFetchName);
+        // console.log(AlbumFetchName);
         PlaylistGet(PlaylistId, PlaylistLimit, AlbumFetchName);
       });
   }
@@ -91,9 +91,9 @@ async function ns() {
   playlistCards.forEach((card) => {
     card.addEventListener("click", async () => {
       const playlistName = card.querySelector(".playlist-name").innerText;
-      console.log(playlistName);
+      // console.log(playlistName);
       const PlaylistIdGet = arr2.filter((obj) => obj.name === playlistName);
-      console.log(PlaylistIdGet);
+      //console.log(PlaylistIdGet);
       const PlaylistId = PlaylistIdGet[0].id;
       const PlaylistBackImg = PlaylistIdGet[0].image[2].url;
       const PlaylistName = PlaylistIdGet[0].name;
@@ -113,7 +113,6 @@ async function ns() {
       OpenPlaylist.forEach((e) => e.classList.add("active"));
       document.querySelector(".Home-content").style.display = "none";
       document.querySelector(".Explore-section").style.display = "none";
-      document.querySelector(".Trending-section").style.display = "none";
       document.querySelector(".Artist-section").style.display = "none";
       document.querySelector(".Album-section").style.display = "none";
       document.querySelector(".CurrentPlaylist-section").style.display =
@@ -187,21 +186,21 @@ async function PlaySongs(data, SongPlaylistId, ClickedPlayListSong) {
   SongCards.forEach((card) => {
     card.addEventListener("click", (event) => {
       const SongId = event.currentTarget.id;
-      console.log(SongId);
+      //console.log(SongId);
       const SongData = data.data.songs.filter((obj) => obj.id === SongId);
       let PlaylistId = SongPlaylistId;
       const SongPlaylistDataId = ClickedPlayListSong.filter(
         (obj) => obj.PlaylistId === SongPlaylistId
       );
-      console.log(SongPlaylistDataId);
-      console.log("Song dta");
+      //console.log(SongPlaylistDataId);
+      //console.log("Song dta");
       let SongLink = SongData[0];
-      console.log(SongLink);
+      //console.log(SongLink);
       const url = SongLink.downloadUrl[4].url;
       let FindIn = ClickedPlayListSong.findIndex(
         (obj) => obj.SongData.id === SongId && obj.PlaylistId === SongPlaylistId
       );
-      console.log("SongCurrentIndex" + FindIn);
+      //console.log("SongCurrentIndex" + FindIn);
       SongCurrentIndex = FindIn;
       audioPlayer.src = url;
       UpdateSongInfo(SongLink, PlaylistId, ClickedPlayListSong);
@@ -223,12 +222,12 @@ async function PlaylistAlbumLoad(
   )
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      //console.log(data);
       let SongCard = "";
       let ClickedPlayListSong = [];
       SongPlaylistId = PlaylistId;
       let songs = data.data.songs;
-      console.log(songs[0].id);
+      //console.log(songs[0].id);
       let limit = Math.min(PlaylistLimit, songs.length - 1);
       document.querySelector(".ShawPlayBack").src = PlaylistBackImg;
       document.querySelector(".AlbumFirstImg").src = songs[0].image[2].url;
@@ -375,30 +374,30 @@ async function AlbumPlay(data, SongPlaylistId, ClickedPlayListSong, dataPath) {
   SongCards.forEach((card) => {
     card.addEventListener("click", (event) => {
       const SongId = event.currentTarget.id;
-      console.log("SongId is " + SongId);
-      console.log(ClickedPlayListSong);
+      //console.log("SongId is " + SongId);
+      //console.log(ClickedPlayListSong);
       const SongPlaylistDataId = playlistArr.filter(
         (obj) => obj.PlaylistId === "SongSearchPlaylist"
       );
       const SongDatas = SongPlaylistDataId.filter(
         (obj) => obj.SongData.id === SongId
       );
-      console.log("Filtered SongData:", SongDatas);
-      console.log(SongPlaylistId);
-      console.log(SongDatas);
-      console.log(ClickedPlayListSong);
+      //console.log("Filtered SongData:", SongDatas);
+      //console.log(SongPlaylistId);
+      //console.log(SongDatas);
+      //console.log(ClickedPlayListSong);
       let PlaylistId = SongPlaylistId;
-      console.log(SongPlaylistDataId);
-      console.log("Song dta");
+      //console.log(SongPlaylistDataId);
+      //console.log("Song dta");
       let SongLink = SongDatas[0].SongData;
-      console.log(SongLink);
+      //console.log(SongLink);
       const url = SongLink.downloadUrl[4].url;
       let FindIn = ClickedPlayListSong.findIndex((obj) => obj.id == SongId);
       FindIn = FindIn + 1;
-      console.log("SongCurrentIndex" + FindIn);
+      //console.log("SongCurrentIndex" + FindIn);
       SongCurrentIndex = FindIn;
       audioPlayer.src = url;
-      console.log(ClickedPlayListSong);
+      //console.log(ClickedPlayListSong);
       UpdateSongInfo(SongLink, PlaylistId, ClickedPlayListSong);
     });
   });
@@ -468,10 +467,10 @@ async function ArtistProfile() {
             playlistArr.push({ PlaylistId: ArtistId, SongData: a });
           }
 
-          console.log(data);
+          //console.log(data);
           hideAllSections();
           let SongPlaylistId = ArtistId;
-          console.log(SongPlaylistId);
+          //console.log(SongPlaylistId);
           document.querySelector(".Artist-section").style.display = "block";
 
           let ArtistImages = document.querySelectorAll(".ArtistImg");
@@ -494,8 +493,8 @@ async function ArtistProfile() {
           }
 
           document.querySelector(".ArtistSong-section").innerHTML = ArtistCard;
-          console.log(ClickedPlayListSong);
-          console.log(totalDurationFormatted);
+          //console.log(ClickedPlayListSong);
+          //console.log(totalDurationFormatted);
           document.querySelector(".TotalTimeOfDuration").innerHTML =
             "Total Play time: " + totalDurationFormatted;
           AlbumPlay2(data, SongPlaylistId, ClickedPlayListSong, dataPath);
@@ -543,7 +542,7 @@ async function PlaylistSearchList() {
                     </div>`;
           }
           document.querySelector(".ArtistSong-section").innerHTML = ArtistCard;
-          console.log(totalDurationFormatted);
+          //console.log(totalDurationFormatted);
           document.querySelector(".TotalTimeOfDuration").innerHTML =
             "Total Play time: " + totalDurationFormatted;
           AlbumPlay2(data, SongPlaylistId, ClickedPlayListSong, dataPath);
@@ -561,7 +560,7 @@ async function AlbumList() {
       fetch(`https://saavn.dev/api/albums?id=${AlbumId}`)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+          //console.log(data);
           hideAllSections();
           document.querySelector(".Artist-section").style.display = "block";
           let dataPath = data.data.songs;
@@ -604,30 +603,30 @@ async function AlbumPlay2(data, SongPlaylistId, ClickedPlayListSong, dataPath) {
   SongCards.forEach((card) => {
     card.addEventListener("click", (event) => {
       const SongId = event.currentTarget.id;
-      console.log("SongId is " + SongId);
-      console.log(ClickedPlayListSong);
+      //console.log("SongId is " + SongId);
+      //console.log(ClickedPlayListSong);
       const SongDatas = ClickedPlayListSong.filter(
         (obj) => obj.SongData.id === SongId
       );
-      console.log("Filtered SongData:", SongDatas);
-      console.log(SongPlaylistId);
-      console.log(SongDatas);
-      console.log(ClickedPlayListSong);
+      // console.log("Filtered SongData:", SongDatas);
+      // console.log(SongPlaylistId);
+      // console.log(SongDatas);
+      // console.log(ClickedPlayListSong);
       let PlaylistId = SongPlaylistId;
       const SongPlaylistDataId = playlistArr.filter(
         (obj) => obj.PlaylistId === SongPlaylistId
       );
-      console.log(SongPlaylistDataId);
-      console.log("Song dta");
+      // console.log(SongPlaylistDataId);
+      // console.log("Song dta");
       let SongLink = SongDatas[0].SongData;
-      console.log(SongLink);
+      // console.log(SongLink);
       const url = SongLink.downloadUrl[4].url;
       let FindIn = ClickedPlayListSong.findIndex((obj) => obj.id == SongId);
       FindIn = FindIn + 1;
-      console.log("SongCurrentIndex" + FindIn);
+      // console.log("SongCurrentIndex" + FindIn);
       SongCurrentIndex = FindIn;
       audioPlayer.src = url;
-      console.log(ClickedPlayListSong);
+      // console.log(ClickedPlayListSong);
       UpdateSongInfo(SongLink, PlaylistId, ClickedPlayListSong);
       queueSong(ClickedPlayListSong, SongId, PlaylistId);
     });
@@ -635,11 +634,11 @@ async function AlbumPlay2(data, SongPlaylistId, ClickedPlayListSong, dataPath) {
 }
 
 async function queueSong(ClickedPlayListSong, SongId, PlaylistId) {
-  console.log("it is the queue o");
+  // console.log("it is the queue o");
   let queueArr = [];
   let PrevQue = [];
   SongPlaylistId = PlaylistId;
-  console.log(ClickedPlayListSong);
+  // console.log(ClickedPlayListSong);
   const SongPlaylistDataId = playlistArr.filter(
     (obj) => obj.PlaylistId === SongPlaylistId
   );
@@ -647,7 +646,7 @@ async function queueSong(ClickedPlayListSong, SongId, PlaylistId) {
     (obj) => obj.SongData.id === SongId && obj.PlaylistId === PlaylistId
   );
   SongCurrentIndex = FindIn;
-  console.log(FindIn);
+  // console.log(FindIn);
 
   for (let i = FindIn; i < ClickedPlayListSong.length; i++) {
     queueArr.push(ClickedPlayListSong[i].SongData);
@@ -671,20 +670,20 @@ async function queueSong(ClickedPlayListSong, SongId, PlaylistId) {
   }
   document.querySelector(".SongQueue").innerHTML =
     `<h3 style="padding:10px 0;"> Related songs </h3>` + QueueCard;
-  console.log(queueArr);
-  console.log(PrevQue);
+  // console.log(queueArr);
+  // console.log(PrevQue);
   let SongCards = document.querySelectorAll(".SongQueueCard");
 
   SongCards.forEach((card) => {
     card.addEventListener("click", (event) => {
       const SongId = event.currentTarget.id;
-      console.log(SongId);
+      // console.log(SongId);
       const SongDt = ClickedPlayListSong.filter(
         (obj) => obj.SongData.id === SongId
       );
-      console.log("Song dta");
+      // console.log("Song dta");
       const SongLink = SongDt[0].SongData;
-      console.log(SongLink);
+      // console.log(SongLink);
       let FindIn1 = ClickedPlayListSong.findIndex(
         (obj) => obj.SongData.id === SongId && obj.PlaylistId === PlaylistId
       );

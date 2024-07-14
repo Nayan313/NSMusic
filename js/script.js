@@ -29,7 +29,6 @@ function cardS(cardSliderId, direction) {
 function hideAllSections() {
   document.querySelector(".Home-content").style.display = "none";
   document.querySelector(".Explore-section").style.display = "none";
-  document.querySelector(".Trending-section").style.display = "none";
   document.querySelector(".CurrentPlaylist-section").style.display = "none";
   document.querySelector(".Artist-section").style.display = "none";
   document.querySelector(".Album-section").style.display = "none";
@@ -44,7 +43,6 @@ SectionButtons.forEach((button) => {
   });
 });
 let OpenPlaylist = document.querySelectorAll("#OpenPlaylist");
-let OpenTrending = document.querySelectorAll("#OpenTrending");
 let OpenExplore = document.querySelectorAll("#OpenExplore");
 let OpenHome = document.querySelectorAll("#OpenHome");
 
@@ -60,12 +58,7 @@ OpenHome.forEach((e)=>{
     document.querySelector(".Home-content").style.display = "block";
   })
 })
-OpenTrending.forEach((e)=>{
-  e.addEventListener("click",()=>{
-    hideAllSections();
-    document.querySelector(".Trending-section").style.display = "block";
-  })
-})
+
 OpenPlaylist.forEach((e)=>{
   e.addEventListener("click",()=>{
     hideAllSections();
